@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8" />
+  <link rel="shortcut icon" href="img/FotoFelipe.jpg">
+  <style>
+    body {
+      font-family: Times;
+      margin: 20px; /* Agrega un margen de 20px alrededor del cuerpo */
+      padding: 0;
+      background-image: url("img/fondo1.jpg");
+      background-size: auto; /* Deja el tamaño de la imagen en su tamaño original */
+      background-repeat: repeat; /* Hace que la imagen se repita */
+      background-position: center;
+    }
+
+    * {
+      font-family: Arial, sans-serif;
+      margin: 10px;
+      color: black; /* Cambia el color del texto a negro */
+    }
+
+    header, footer {
+      display: flex;
+      justify-content: center;
+      background: linear-gradient(to right, #2596be, #e425d1ba);
+      height: 80px;
+      transition: background 0.5s;
+    }
+
+    header:hover, footer:hover {
+      background: linear-gradient(to right, #e425d1ba, #2596be);
+    }
+
+    #foto {
+      border-radius: 10px;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+      float: right;
+      width: 250px; /* Aumenta el tamaño de la imagen */
+      height: 250px; /* Aumenta el tamaño de la imagen */
+      transition: transform 0.5s;
+    }
+
+    #foto:hover {
+      transform: scale(1.2);
+    }
+
+    #navegador {
+      background: linear-gradient(to right, #2596be, #e425d1ba);
+      text-align: center;
+      padding: 10px;
+      margin-top: 20px;
+      border-radius: 10px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+      transition: background 0.5s;
+    }
+
+    #navegador:hover {
+      background: linear-gradient(to right, #e425d1ba, #2596be);
+    }
+
+    #name:hover {
+      font-weight: bold;
+      color: rgb(0, 0, 0);
+    }
+
+    ol {
+      margin: 20px 0 0 -20px;
+      color: rgb(94, 84, 84);
+      font-size: 16px;
+    }
+
+    a {
+      text-decoration: none;
+      color: black;
+      transition: color 0.3s, transform 0.3s;
+    }
+
+    a:hover {
+      font-weight: bold;
+      color: #2596be;
+      transform: scale(1.1);
+    }
+
+    a:active {
+      color: blue;
+    }
+
+    li {
+      margin-top: 12px;
+    }
+
+    hr {
+      border: none;
+      height: 1px;
+      background-color: #85C1E9; /* Color celeste */
+      margin-top: 10px;
+      margin-bottom: 10px;
+    }
+
+    .section {
+      margin-bottom: 20px;
+    }
+
+    .section h5 {
+      margin-top: 0;
+    }
+
+    .section img {
+      width: 150px; /* Aumenta el tamaño de las imágenes */
+      height: 150px; /* Aumenta el tamaño de las imágenes */
+      border-radius: 50%;
+      margin-right: 10px;
+      box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
+      float: left;
+      transition: transform 0.3s ease; /* Agrega una transición al hacer hover */
+    }
+
+    .section img:hover {
+      transform: scale(1.1); /* Escala un poco más grande al hacer hover */
+      cursor: pointer; /* Cambia el cursor al hacer hover */
+    }
+
+    .dynamic-box {
+      display: inline-block;
+      margin: 20px;
+      padding: 20px;
+      border: 1px solid #659ef3;
+      border-radius: 10px;
+      box-shadow: 0 4px 8px rgba(16, 65, 105, 0.527);
+      transition: transform 0.3s, box-shadow 0.3s;
+    }
+
+    .dynamic-box:hover {
+      transform: scale(1.05);
+      box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+    }
+
+    .zoom-image {
+      position: relative;
+      cursor: pointer;
+    }
+
+    .zoom-image img {
+      border-radius: 10px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+      width: 150px; /* Ajusta el tamaño de la imagen */
+      height: 150px; /* Ajusta el tamaño de la imagen */
+      transition: transform 0.5s;
+    }
+
+    .zoom-image:hover img {
+      transform: scale(1.2);
+    }
+
+    .zoom-text {
+      display: none;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      color: white;
+      font-size: 18px;
+      background-color: rgba(0, 0, 0, 0.7);
+      padding: 10px;
+      border-radius: 10px;
+      text-align: center;
+    }
+
+    .zoom-image.show-text .zoom-text {
+      display: block;
+    }
+  </style>
+  <title>Oferta Académica UCE</title>
+</head>
+<body>
+  <header>
+    <marquee scrollamount="15"> <h2 id="name">Contenido Pensamiento computacional</h2> </marquee>
+  </header>
+  <nav id="navegador">
+    <ul>
+      <div class="nav">
+        <a href="index.html">Inicio</a>
+        <a href="multimedia.html">Multimedia</a>
+        <a href="yo.html">Desarrollador</a>
+    </ul>
+  </nav>
+  <main>
+    <div class="section dynamic-box">
+      <h3>Algoritmia</h3>
+      <div class="zoom-image" onclick="toggleZoomText(this)">
+        <img src="img/algoritmia.jpg" alt="Algoritmia">
+        <div class="zoom-text">Algoritmia</div>
+      </div>
+      <p>La algoritmia es una disciplina fundamental en la informática. Se refiere al diseño y análisis de algoritmos para resolver problemas.
+        Un algoritmo informático es un conjunto de instrucciones definidas, ordenadas y acotadas para resolver un problema, realizar un cálculo o desarrollar una tarea. Es decir, un algoritmo es un procedimiento paso a paso para conseguir un fin. A partir de un estado e información iniciales, se siguen una serie de pasos ordenados para llegar a la solución de una situación. 
+
+En programación, un algoritmo supone el paso previo a ponerse a escribir el código. Primero debemos encontrar la forma de obtener la solución al problema (definir el algoritmo informático), para luego, a través del código, poder indicarle a la máquina qué acciones queremos que lleve a cabo. De este modo, un programa informático no sería más que un conjunto de algoritmos ordenados y codificados en un lenguaje de programación para poder ser ejecutados en un ordenador.
+
+No obstante, los algoritmos no son algo exclusivo de los ámbitos de las matemáticas, la lógica y la computación. Utilizamos numerosos algoritmos para resolver problemas en nuestra vida cotidiana. Algunos de los ejemplos más habituales son los manuales de instrucciones o las recetas de cocina. 
+      </p>
+    </div>
+    <div class="section dynamic-box">
+      <h3>Abstracción</h3>
+      <div class="zoom-image" onclick="toggleZoomText(this)">
+        <img src="img/abstraccion.jpg" alt="Abstracción">
+        <div class="zoom-text">Abstracción</div>
+      </div>
+      <p>La abstracción es la capacidad de concentrarse en los aspectos importantes de un problema, ignorando detalles irrelevantes. 
+        La abstracción es un termino que hace referencia a la ocultación de la complejidad intrínseca de una aplicación al exterior, centrándose sólo en como puede ser usada, lo que se conoce como interfaz. Si has oído hablar del enfoque caja negra, es un concepto muy relacionado. Dicho en otras palabras, la abstracción consiste en ocultar toda la complejidad que algo puede tener por dentro, ofreciéndonos unas funciones de alto nivel, por lo general sencillas de usar, que pueden ser usadas para interactuar con la aplicación sin tener conocimiento de lo que hay dentro.
+
+Una analogía del mundo real podría ser la televisión. Se trata de un dispositivo muy complejo donde han trabajado gran cantidad de ingenieros de diversas disciplinas como telecomunicaciones o electrónica. ¿Os imagináis que para cambiar de canal tuviéramos que saber todos los entresijos del aparato?. Pues bien, se nos ofrece una abstracción de la televisión, un mando a distancia. El mando nos abstrae por completo de la complejidad de los circuitos y señales, y nos da una interfaz sencilla que con unos pocos botones podemos usar.
+
+      </p>
+    </div>
+    <div class="section dynamic-box">
+      <h3>Pensamiento Algorítmico</h3>
+      <div class="zoom-image" onclick="toggleZoomText(this)">
+        <img src="img/pensamiento.jpg" alt="Pensamiento Algorítmico">
+        <div class="zoom-text">Pensamiento Algorítmico</div>
+      </div>
+      <p>El pensamiento algorítmico es una forma de resolver problemas de manera estructurada y eficiente, utilizando algoritmos.  
+        Se trata de una habilidad muy demandada en el mundo laboral actual y con la que podemos resolver problemas de manera eficiente. Además, podemos ver en ella las bases de la programación, ya que los lenguajes de programación se basan en el uso de algoritmos. En este post te contamos qué es, para qué se utiliza y algunos ejemplos de pensamiento algorítmico.
+
+La definición de pensamiento algorítmico no está contemplada en la RAE. Aun así, se entiende como el proceso que permite solucionar problemas lógicos de manera eficiente. De este modo, podemos utilizar esta habilidad para encontrar la solución a cualquier problema.
+
+Se trata de una habilidad muy demandada en el mundo laboral actual y con la que podemos resolver problemas de manera eficiente. Además, podemos ver en ella las bases de la programación, ya que los lenguajes de programación se basan en el uso de algoritmos. En este post te contamos qué es, para qué se utiliza y algunos ejemplos de pensamiento algorítmico.
+      </p>
+    </div>
+    <div class="section dynamic-box">
+      <h3>Recursividad</h3>
+      <div class="zoom-image" onclick="toggleZoomText(this)">
+        <img src="img/recursividad.png" alt="Recursividad">
+        <div class="zoom-text">Recursividad</div>
+      </div>
+      <p>La recursividad es una técnica en la que una función se llama a sí misma para resolver un problema.  
+        En ciencias de la computación, la recursión es un método donde la solución de un problema depende de soluciones más pequeñas del mismo problema. El enfoque recursivo se utiliza comúnmente en problemas donde una tarea se puede dividir en subtareas del mismo tipo. Una función recursiva es una función que se llama a sí misma durante su ejecución. Esto permite que la función se repita varias veces, ya que llama a una versión más simple de sí misma.
+
+La recursión es un concepto importante en programación y se utiliza a menudo para resolver problemas que se pueden dividir en subproblemas más pequeños y de estructura similar. Los algoritmos recursivos son una herramienta poderosa, pero deben usarse con precaución para evitar errores como la recursión infinita, que puede causar un desbordamiento de pila y hacer que el programa falle.
+      </p>
+    </div>
+  </main>
+  <footer>
+    <marquee scrollamount="15"><h2>Formación Académica</h2></marquee>
+  </footer>
+</body>
+<script>
+  function toggleZoomText(element) {
+    element.classList.toggle('show-text');
+  }
+</script>
+</html>

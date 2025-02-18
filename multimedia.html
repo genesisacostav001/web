@@ -1,0 +1,293 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <link rel="shortcut icon" href="img/FotoFelipe.jpg">
+  <style>
+    body {
+      font-family: Times;
+      margin: 20px; /* Agrega un margen de 20px alrededor del cuerpo */
+      padding: 0;
+      background-image: url("img/fondo1.jpg");
+      background-size: auto; /* Deja el tamaño de la imagen en su tamaño original */
+      background-repeat: repeat; /* Hace que la imagen se repita */
+      background-position: center;
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    header, footer {
+      display: flex;
+      justify-content: center;
+      background: linear-gradient(to right, #2596be, #e425d1ba);
+      height: 50px;
+      align-items: center;
+      color: white;
+    }
+
+    #foto {
+      border-radius: 10px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+      width: 200px;
+      height: 200px;
+    }
+
+    #navegador {
+      background-color: #f4f4f4;
+      border: 2px solid #2596be;
+      border-radius: 10px;
+      overflow: hidden;
+      margin-bottom: 20px;
+    }
+
+    #navegador ul {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+      display: flex;
+      justify-content: center;
+    }
+
+    #navegador li {
+      margin: 0;
+    }
+
+    #navegador a {
+      color: black;
+      padding: 14px 20px;
+      display: inline-block;
+      text-decoration: none;
+      transition: background 0.3s, color 0.3s;
+      border-right: 1px solid #2596be;
+    }
+
+    #navegador a:hover {
+      background: #2596be;
+      color: white;
+      font-weight: bold;
+    }
+
+    #navegador a:last-child {
+      border-right: none;
+    }
+
+    ol {
+      margin: 20px 0 0 0;
+      color: rgb(94, 84, 84);
+      font-size: 16px;
+    }
+
+    a {
+      text-decoration: none;
+      color: black;
+      transition: color 0.3s, transform 0.3s;
+    }
+
+    a:hover {
+      font-weight: bold;
+      color: black;
+      transform: scale(1.1);
+    }
+
+    a:active {
+      color: blue;
+    }
+
+    li {
+      margin-top: 12px;
+    }
+
+    aside {
+      height: 310px;
+    }
+
+    #imgredes {
+      width: 30px;
+      height: 30px;
+    }
+
+    #imgredes:hover {
+      width: 40px;
+      height: 40px;
+    }
+
+    ul#redes {
+      list-style: none;
+      padding: 0;
+      text-align: center;
+    }
+
+    li#rsocial:hover {
+      font-size: 30px;
+    }
+
+    .gallery {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 20px;
+    }
+
+    .gallery-group {
+      width: 500px;
+      background: linear-gradient(to right, #e425d1ba, #e0f7fa);
+      border-radius: 10px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+      transition: transform 0.3s, box-shadow 0.3s;
+      text-align: center;
+    }
+
+    .gallery-group:hover {
+      transform: scale(1.05);
+      box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+    }
+
+    .gallery-group h2 {
+      margin: 20px 0;
+    }
+
+    .foto {
+      margin-bottom: 20px;
+    }
+
+    footer {
+      margin-top: auto;
+      text-align: center;
+      background: linear-gradient(to right, #2596be, #e425d1ba);
+      color: white;
+      padding: 5px 0;
+    }
+
+    h1, h2, h4 {
+      color: black;
+    }
+
+    .zoom-image {
+      position: relative;
+      cursor: pointer;
+    }
+
+    .zoom-image img {
+      border-radius: 10px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+      width: 100%;
+      max-width: 430px;
+      height: auto;
+      transition: transform 0.5s;
+    }
+
+    .zoom-image:hover img {
+      transform: scale(1.2);
+    }
+
+    .zoom-text {
+      display: none;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      color: white;
+      font-size: 18px;
+      background-color: rgba(0, 0, 0, 0.7);
+      padding: 10px;
+      border-radius: 10px;
+      text-align: center;
+    }
+
+    .zoom-image.show-text .zoom-text {
+      display: block;
+    }
+
+    .container {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 20px;
+    }
+
+    article {
+      background: linear-gradient(to right, #e425d1ba, #e0f7fa);
+      padding: 20px;
+      border-radius: 10px;
+      margin-bottom: 20px;
+      text-align: center;
+    }
+
+    embed {
+      width: 100%; /* Ajusta el ancho para que se adapte al contenedor */
+      height: 400px;
+      margin: 10px 0;
+      border: 0; /* Elimina el borde por defecto */
+    }
+  </style>
+  <title>Estudios</title>
+</head>
+<body>
+  <header>
+    <h2 id="name">PENSAMIENTO COMPUTACIONAL</h2>
+  </header>
+  <main>
+    <marquee scrollamount="15"><h1>Material Didáctico</h1></marquee>
+  </main>
+  <div class="container">
+    <nav id="navegador">
+      <ul>
+        <li><a href="scra.html">Atrás</a></li>
+        <li><a href="index.html">Inicio</a></li>
+        <li><a href="contenido.html">Contenido</a></li>
+        <li><a href="multimedia.html">Multimedia</a></li>
+        <li><a href="yo.html">Desarrollador</a></li>
+      </ul>
+    </nav>
+    <article>
+      <h2>Videos Relacionados</h2>
+      <video width="320" height="240" controls autoplay loop muted>
+        <source src="img/PL.mp4" type="video/webm" />
+        <source src="img/PL.webm" type="video/mp4"/>
+        Su Navegador NO SOPORTA la etiqueta VIDEO.
+      </video>
+    </article>
+
+    <div class="gallery">
+      <div class="gallery-group">
+        <h2>Mapas conceptuales</h2>
+        <div class="zoom-image" onclick="toggleZoomText(this)">
+          <img src="img/Mapa1.png" alt="Mapa Conceptual 1">
+          <div class="zoom-text">La lógica es la ciencia de las formas del pensamiento estudiadas desde el punto de vista de su estructura, la ciencia de las leyes que deben de observarse para obtener un conocimiento inferido. La lógica estudia también los procedimientos lógicos generales utilizados para el conocimiento de la realidad.</div>
+        </div>
+        <div class="zoom-image" onclick="toggleZoomText(this)">
+          <img src="img/Diapositiva2.JPG" alt="Mapa Conceptual 2">
+          <div class="zoom-text">¿Qué es? un concepto semejante a argumentos deductivamente válidos.</div>
+        </div>
+      </div>
+      <div class="gallery-group">
+        <h2>Mapas conceptuales</h2>
+        <div class="zoom-image" onclick="toggleZoomText(this)">
+          <img src="img/eje.jpg" alt="Diapositiva 1">
+          <div class="zoom-text">Nos permite creación rápida y sencilla</div>
+        </div>
+        <div class="zoom-image" onclick="toggleZoomText(this)">
+          <img src="img/nd.png" alt="Diapositiva 2">
+          <div class="zoom-text">Necesitamos aprender la lógica matemática para poder entender la lógica de los bloques</div>
+        </div>
+      </div>
+    </div>
+
+    <article>
+      <h2>Juegos interactivos</h2>
+      <h4>Aquí pondremos en práctica lo visto anteriormente</h4>
+      <embed src="https://es.educaplay.com/recursos-educativos/22432587-lenguaje_de_programacion_scratch.html" type="text/html" allowfullscreen="true">
+      </article>
+  </div>
+  <footer>
+    <p>&copy; 2025 SITIO WEB DE GÉNESIS ACOSTA 7MO "A"</p>
+  </footer>
+
+  <script>
+    function toggleZoomText(element) {
+      element.classList.toggle('show-text');
+    }
+  </script>
+</body>
+</html>

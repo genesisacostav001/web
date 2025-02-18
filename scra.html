@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Página Web de Scratch</title>
+    <style>
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+
+        @keyframes slideIn {
+            from { transform: translateX(-100%); }
+            to { transform: translateX(0); }
+        }
+
+        @keyframes bounce {
+            0%, 20%, 50%, 80%, 100% { transform: translateY(0); }
+            40% { transform: translateY(-30px); }
+            60% { transform: translateY(-15px); }
+        }
+
+        body {
+            font-family: Times;
+      margin: 20px; /* Agrega un margen de 20px alrededor del cuerpo */
+      padding: 0;
+      background-image: url("img/fondo1.jpg");
+      background-size: auto; /* Deja el tamaño de la imagen en su tamaño original */
+      background-repeat: repeat; /* Hace que la imagen se repita */
+      background-position: center;
+        }
+
+        .header {
+            background: linear-gradient(to right, #2596be, #e425d1ba);
+            color: white;
+            text-align: center;
+            padding: 20px 0;
+            animation: bounce 2s infinite;
+            transition: background 0.5s;
+        }
+
+        .header:hover {
+            background: linear-gradient(to right, #e425d1ba, #2596be);
+        }
+
+        .nav {
+            background: linear-gradient(to right, #2596be, #e425d1ba);
+            overflow: hidden;
+            text-align: center;
+            transition: background 0.5s;
+        }
+
+        .nav a {
+           
+            display: inline-block;
+            color: rgb(0, 0, 0);
+            text-align: center;
+            padding: 14px 20px;
+            text-decoration: none;
+            animation: slideIn 1s ease-in-out;
+            transition: background 0.3s, color 0.3s;
+        }
+
+        .nav a:hover {
+            background: #399b9b;
+            color: rgb(214, 209, 209);
+        }
+
+        .container {
+            display: flex;
+            flex-wrap: wrap;
+            width: 100%;
+            max-width: 1200px;
+            margin: 0 auto;
+            overflow: hidden;
+            padding: 20px;
+            background: linear-gradient(to right, #057c2973, #05357c73);
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            animation: fadeIn 2s ease-in;
+        }
+
+        .content {
+            flex: 2;
+            margin-right: 20px;
+            text-align: justify;
+            animation: slideIn 1s ease-in-out;
+            border: 2px solid #000000;
+            padding: 15px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease-in-out;
+        }
+
+        .content:hover {
+            transform: scale(1.05);
+        }
+
+        .content img {
+            width: 100%;
+            height: auto;
+            margin: 5px;
+        }
+
+        .content2 {
+            flex: 2;
+            text-align: justify;
+            animation: slideIn 1s ease-in-out;
+            border: 2px solid #000000;
+            padding: 15px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease-in-out;
+        }
+
+        .content2:hover {
+            transform: scale(1.05);
+        }
+
+        .content2 img {
+            width: 100%;
+            height: auto;
+            margin: 5px;
+        }
+
+        .sidebar {
+            flex: 1;
+            background: linear-gradient(to right, #2596be, #e425d1ba);
+            padding: 10px;
+            box-sizing: border-box;
+            animation: fadeIn 2s ease-in;
+            transition: background 0.5s;
+            text-align: center;
+            min-width: 200px;
+        }
+
+        .sidebar:hover {
+            background: linear-gradient(to right, #e425d1ba, #2596be);
+        }
+
+        .sidebar p {
+            display: block;
+            margin: 10px 0;
+            padding: 10px;
+            background: rgba(255, 255, 255, 0.8);
+            border-radius: 5px;
+            transition: transform 0.3s ease-in-out;
+        }
+
+        .sidebar p:hover {
+            transform: scale(1.1);
+        }
+
+        .footer {
+            clear: both;
+            background: linear-gradient(to right, #2596be, #e425d1ba);
+            color: white;
+            text-align: center;
+            padding: 5px 0;
+            position: fixed;
+            width: 110%;
+            bottom: 0;
+            transition: background 0.5s;
+        }
+
+        .footer:hover {
+            background: linear-gradient(to right, #e425d1ba, #2596be);
+        }
+
+        .scratch-theme {
+            background: linear-gradient(to right, #2596be, #e425d1ba);
+            padding: 10px;
+            color: white;
+            text-align: center;
+            border-radius: 10px;
+            margin-top: 20px;
+            transition: background 0.5s;
+        }
+
+        .scratch-theme:hover {
+            background: linear-gradient(to right, #e425d1ba, #2596be);
+        }
+    </style>
+</head>
+<body>
+    <div class="header">
+        <h1>Explorando Scratch</h1>
+    </div>
+
+    <div class="nav">
+        <a href="index.html">Inicio</a>
+        <a href="multimedia.html">Multimedia</a>
+        <li><a href="contenido.html">Contenido</a></li>
+        <a href="yo.html">Desarrollador</a>
+    </div>
+
+    <div class="container">
+        <div class="content">
+            <center><h1>Inteligencia Artificial en Scratch</h1></center>
+            <img src="img/R.png" alt="Imagen de Ejemplo">
+            <p>La inteligencia artificial (IA) es la rama de las ciencias computacionales que se encarga del diseño y construcción de sistemas capaces de realizar tareas asociadas con la inteligencia humana. <br>
+                ■ Sus aplicaciones van desde el reconocimiento en imágenes o video de objetos y personas, hasta el habla y la traducción automática de textos, pasando por el diagnóstico y tratamiento de enfermedades y la toma de decisiones.
+                <br>
+                ■ El desarrollo de la IA se ha acelerado gracias a una mayor disponibilidad de datos, recursos tecnológicos y financieros, así como avances en las técnicas de aprendizaje computacional, una de sus principales áreas.
+                <br>
+                ■ Se estima que el valor del mercado mundial de la IA será de al menos 126 mil millones de dólares estadounidenses en 2025.
+                <br>
+                ■ La IA tiene un gran impacto laboral, ya que más de 65% de los empleos podrían ser automatizadas en países en vías de desarrollo, mientras que en los desarrollados se reducirá la contratación de mano de obra en el extranjero en favor del uso de IA en su territorio.
+                <br>
+                ■ Sin embargo, se anticipa la generación de nuevos empleos y crecimiento económico en aquellos países que desarrollen y apliquen estas tecnologías.
+                <br>
+                ■ Algunos factores clave del uso y aprovechamiento social de los sistemas inteligentes son: la transparencia y confiabilidad en la toma de decisiones y la representatividad</p>
+        </div>
+
+        <div class="content2">
+            <center><h1>Implicaciones Sociales</h1></center>
+            <img src="img/B.png" alt="Imagen de Ejemplo">
+            <p>El desarrollo de tecnologías inteligentes impacta profundamente en la sociedad. En el sector productivo, las oficinas gerenciales incorporan métodos automáticos para la toma de decisiones. En la manufactura, usan robots con capacidades de desplazamiento y localización de objetos. En la agricultura, se desarrollan tecnologías para diagnosticar oportunamente enfermedades en cosechas, así como sistemas de vigilancia del suelo, utilizando sensores, imágenes satelitales y registros históricos para predecir la productividad de los plantíos. Debido a su alto costo, estas tecnologías sólo son accesibles para grandes empresas en la actualidad.
+                <br>
+                <br>
+                En la educación, la IA será central en las escuelas del futuro, cambiando radicalmente el papel del profesor en el aula. Actualmente ya hay sistemas inteligentes capaces de dar asesoría personalizada a cada alumno en reportes y ensayos, lo cual permite a los profesores identificar áreas de oportunidad con mayor eficacia. Asimismo, también ha crecido el número de plataformas que ofrecen tutorías por internet para todos los grados educativos. Sin embargo, el INEGI reportó que en 2016 sólo el 59.5% de los mexicanos mayores de 6 años tenían acceso a Internet y que estos se encuentran distribuidos en el 47% de los hogares, lo que sugiere la necesidad de mejorar el acceso a este tipo de tecnologías.
+            </p>
+        </div>
+        <div class="sidebar">
+            <h3>Noticias Recientes</h3>
+            <p>- Como es la robótica que se aprende haciendo y se desarrollan habilidades fundamentales para la vida.</p>
+            <p>- Jurassic World 4 apostará por el terror, tendrá dinosaurios sin plumas y buscará parecerse a King Kong.</p>
+            <p>- Todas las becas disponibles para los que quieran estudiar en el extranjero.</p>
+        
+            <h3>Acerca de Scratch</h3>
+            <p>Scratch es un lenguaje de programación visual desarrollado por el MIT para ayudar a los niños y principiantes a aprender conceptos de programación de manera intuitiva y divertida. Los usuarios pueden crear sus propios proyectos interactivos arrastrando y soltando bloques de código.</p>
+            <img src="img/pe.jfif" alt="Logo de Scratch" style="width: 210px; height: auto;">
+        </div>
+        
+    </div>
+
+    <div class="footer">
+        <p>&copy; 2024 Mi Página Web de Scratch<br>
+        </p>
+    </div>
+</body>
+</html>

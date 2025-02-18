@@ -1,0 +1,363 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="assets/img/favicon.png" type="image/png">
+
+    <!--=============== REMIXICONS ===============-->
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@2.5.0/fonts/remixicon.css" rel="stylesheet">
+    
+    <!--=============== SWIPER CSS ===============-->
+    <link rel="stylesheet" href="assets/css/swiper-bundle.min.css">
+
+    <!--=============== CSS ===============-->
+    <link rel="stylesheet" href="assets/css/styles.css">
+
+    <title>Scratch</title>
+</head>
+<body>
+    <header class="header" id="header">
+        <nav class="nav container">
+            <a href="contenido.html" class="nav__logo">Scratch</a>
+
+            <div class="nav__menu" id="nav-menu">
+                <ul class="nav__list">
+                    <li class="nav__item">
+                        <a href="#home" class="nav__link active-link">Inicio</a>
+                    </li>
+                    <li class="nav__item">
+                        <a href="#about" class="nav__link">Acerca de</a>
+                    </li>
+                    <li class="nav__item">
+                        <a href="#discover" class="nav__link">Proyectos</a>
+                    </li>
+                    <li class="nav__item">
+                        <a href="#resources" class="nav__link">Recursos</a>
+                    </li>
+                    <li class="nav__item">
+                        <a href="yo.html" class="nav__link">Información Desarrollador</a>
+                    </li>
+                </ul>
+
+                <div class="nav__dark">
+                    <!-- Botón de cambio de tema -->
+                    <span class="change-theme-name">Modo oscuro</span>
+                    <i class="ri-moon-line change-theme" id="theme-button"></i>
+                </div>
+
+                <i class="ri-close-line nav__close" id="nav-close"></i>
+            </div>
+
+            <div class="nav__toggle" id="nav-toggle">
+                <i class="ri-function-line"></i>
+            </div>
+        </nav>
+    </header>
+
+    <main class="main">
+        
+        <!--==================== INICIO ====================-->
+        <section class="home" id="home">
+            <img src="assets/img/scratch_home.jpg" alt="" class="home__img">
+
+            <div class="home__container container grid">
+                <div class="home__data">
+                    <span class="home__data-subtitle">Aprende con Scratch</span>
+                    <h1 class="home__data-title">Crea y comparte <br> proyectos <b>asombrosos de Scratch</b></h1>
+                    <a href="scra.html" class="button">Comenzar</a>
+                </div>
+
+                <div class="home__social">
+                    <a href="https://www.facebook.com/" target="_blank" class="home__social-link">
+                        <i class="ri-facebook-box-fill"></i>
+                    </a>
+                    <a href="https://www.instagram.com/" target="_blank" class="home__social-link">
+                        <i class="ri-instagram-fill"></i>
+                    </a>
+                    <a href="https://twitter.com/" target="_blank" class="home__social-link">
+                        <i class="ri-twitter-fill"></i>
+                    </a>
+                </div>
+
+                <div class="home__info">
+                    <div>
+                        <span class="home__info-title"> Scratch: PENSAMIENTO COMPUTACIONAL</span>
+                        <a href="multimedia.html" class="button button--flex button--link home__info-button">
+                            Explorar <i class="ri-arrow-right-line"></i>
+                        </a>
+                    </div>
+
+                    <div class="home__info-overlay">
+                        <img src="assets/img/scratch_projects.jpg" alt="" class="home__info-img">
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!--==================== ACERCA DE ====================-->
+        <section class="about section" id="about">
+            <div class="about__container container grid">
+                <div class="about__data">
+                    <h2 class="section__title about__title">Más información <br> sobre Scratch</h2>
+                    <p class="about__description">Scratch es un lenguaje de programación gratuito y una comunidad en línea donde puedes crear tus propias historias interactivas, juegos y animaciones. También puedes compartir tus creaciones con otros en la comunidad en línea.</p>
+                    <a href="#resources" class="nav__link">Más información</a>
+                </div>
+
+                <div class="about__img">
+                    <div class="about__img-overlay">
+                        <img src="assets/img/about_scratch1.png" alt="" class="about__img-one">
+                    </div>
+
+                    <div class="about__img-overlay">
+                        <img src="assets/img/about_scratch2.jfif" alt="" class="about__img-two">
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <!--==================== PROYECTOS ====================-->
+        <section class="discover section" id="discover">
+            <h2 class="section__title">Descubre los proyectos <br> más creativos</h2>
+            
+            <div class="discover__container container swiper-container">
+                <div class="swiper-wrapper">
+                    <!--==================== PROYECTO 1 ====================-->
+                    <div class="discover__card swiper-slide">
+                        <img src="assets/img/project1.jpg" alt="" class="discover__img">
+                        <div class="discover__data">
+                            <h2 class="discover__title">Animación</h2>
+                            <span class="discover__description">Animaciones creativas</span>
+                        </div>
+                    </div>
+
+                    <!--==================== PROYECTO 2 ====================-->
+                    <div class="discover__card swiper-slide">
+                        <img src="assets/img/project2.png" alt="" class="discover__img">
+                        <div class="discover__data">
+                            <h2 class="discover__title">Juegos</h2>
+                            <span class="discover__description">Juegos interactivos</span>
+                        </div>
+                    </div>
+
+                    <!--==================== PROYECTO 3 ====================-->
+                    <div class="discover__card swiper-slide">
+                        <img src="assets/img/project3.jpg" alt="" class="discover__img">
+                        <div class="discover__data">
+                            <h2 class="discover__title">Historias</h2>
+                            <span class="discover__description">Historias atractivas</span>
+                        </div>
+                    </div>
+
+                    <!--==================== PROYECTO 4 ====================-->
+                    <div class="discover__card swiper-slide">
+                        <img src="assets/img/project4.png" alt="" class="discover__img">
+                        <div class="discover__data">
+                            <h2 class="discover__title">Arte</h2>
+                            <span class="discover__description">Obras de arte hermosas</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!--==================== EXPERIENCIA ====================-->
+        <section class="experience section">
+            <h2 class="section__title">¿Por qué Scratch? <br> Nuestra experiencia</h2>
+
+            <div class="experience__container container grid">
+                <div class="experience__content grid">
+                    <div class="experience__data">
+                        <h2 class="experience__number">20M</h2>
+                        <span class="experience__description">Proyectos <br> creados</span>
+                    </div>
+
+                    <div class="experience__data">
+                        <h2 class="experience__number">50M</h2>
+                        <span class="experience__description">Usuarios <br> en todo el mundo</span>
+                    </div>
+
+                    <div class="experience__data">
+                        <h2 class="experience__number">30+</h2>
+                        <span class="experience__description">Idiomas <br> soportados</span>
+                    </div>
+                </div>
+
+                <div class="experience__img grid">
+                    <div class="experience__overlay">
+                        <img src="assets/img/experience_scratch1.png" alt="" class="experience__img-one">
+                    </div>
+                    
+                    <div class="experience__overlay">
+                        <img src="assets/img/experience_scratch2.png" alt="" class="experience__img-two">
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!--==================== VIDEO ====================-->
+        <section class="video section">
+            <h2 class="section__title">Video tutorial</h2>
+
+            <div class="video__container container">
+                <p class="video__description">Aprende a crear proyectos en Scratch con nuestro video tutorial.</p>
+
+                <div class="video__content">
+                    <video id="video-file">
+                        <source src="assets/video/scratch_tutorial.mp4" type="video/mp4">
+                    </video>
+
+                    <button class="button button--flex video__button" id="video-button">
+                        <i class="ri-play-line video__button-icon" id="video-icon"></i>
+                    </button>
+                </div>
+            </div>
+        </section>
+
+        <!--==================== RECURSOS ====================-->
+        <section class="place section" id="resources">
+            <h2 class="section__title">Recursos educativos</h2>
+
+            <div class="place__container container grid">
+                <div class="place__card">
+                    <img href="multimedia.html" src="assets/img/resource1.png" alt="multimedia.html" class="place__img">
+                    <div class="place__content">
+                        <span class="place__rating">
+                            <i class="ri-star-line place__rating-icon"></i>
+                            <span class="place__rating-number">4.8</span>
+                        </span>
+                        <div class="place__data">
+                            <h3 class="place__title">Guías de programación</h3>
+                            <span class="place__subtitle">Recursos</span>
+                            <span class="place__price">Gratis</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="place__card">
+                    <img src="assets/img/resource2.jpg" alt="" class="place__img">
+                    <div class="place__content">
+                        <span class="place__rating">
+                            <i class="ri-star-line place__rating-icon"></i>
+                            <span class="place__rating-number">4.9</span>
+                        </span>
+                        <div class="place__data">
+                            <h3 class="place__title">Tutoriales en video</h3>
+                            <span class="place__subtitle">Recursos</span>
+                            <span class="place__price">Gratis</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="place__card">
+                    <img src="assets/img/resource3.jpg" alt="" class="place__img">
+                    <div class="place__content">
+                        <span class="place__rating">
+                            <i class="ri-star-line place__rating-icon"></i>
+                            <span class="place__rating-number">4.7</span>
+                        </span>
+                        <div class="place__data">
+                            <h3 class="place__title">Materiales para el aula</h3>
+                            <span class="place__subtitle">Recursos</span>
+                            <span class="place__price">Gratis</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+<!--==================== FOOTER ====================-->
+<footer class="footer section">
+    <div class="footer__container container grid">
+        <div class="footer__content grid">
+            <div class="footer__data">
+                <h3 class="footer__title">Scratch</h3>
+                <p class="footer__description">Scratch es una plataforma donde los usuarios pueden crear y compartir proyectos interactivos. ¡Explora, aprende y diviértete programando!</p>
+                <div>
+                    <a href="https://www.facebook.com/Scratch" target="_blank" class="footer__social">
+                        <i class="ri-facebook-box-fill"></i>
+                    </a>
+                    <a href="https://twitter.com/Scratch" target="_blank" class="footer__social">
+                        <i class="ri-twitter-fill"></i>
+                    </a>
+                    <a href="https://www.instagram.com/scratch/" target="_blank" class="footer__social">
+                        <i class="ri-instagram-fill"></i>
+                    </a>
+                    <a href="https://www.youtube.com/user/ScratchTeam" target="_blank" class="footer__social">
+                        <i class="ri-youtube-fill"></i>
+                    </a>
+                </div>
+            </div>
+
+            <div class="footer__data">
+                <h3 class="footer__subtitle">Sobre Scratch</h3>
+                <ul>
+                    <li class="footer__item">
+                        <a href="https://www.scratch.mit.edu/about" class="footer__link" target="_blank">Sobre nosotros</a>
+                    </li>
+                    <li class="footer__item">
+                        <a href="https://www.scratch.mit.edu/about/features" class="footer__link" target="_blank">Características</a>
+                    </li>
+                    <li class="footer__item">
+                        <a href="https://www.scratch.mit.edu/stories" class="footer__link" target="_blank">Noticias & Blog</a>
+                    </li>
+                </ul>
+            </div>
+
+            <div class="footer__data">
+                <h3 class="footer__subtitle">Comunidad</h3>
+                <ul>
+                    <li class="footer__item">
+                        <a href="https://www.scratch.mit.edu/community" class="footer__link" target="_blank">Foros</a>
+                    </li>
+                    <li class="footer__item">
+                        <a href="https://www.scratch.mit.edu/events" class="footer__link" target="_blank">Eventos</a>
+                    </li>
+                    <li class="footer__item">
+                        <a href="https://www.scratch.mit.edu/contests" class="footer__link" target="_blank">Concursos</a>
+                    </li>
+                </ul>
+            </div>
+
+            <div class="footer__data">
+                <h3 class="footer__subtitle">Soporte</h3>
+                <ul>
+                    <li class="footer__item">
+                        <a href="https://www.scratch.mit.edu/help" class="footer__link" target="_blank">Preguntas frecuentes</a>
+                    </li>
+                    <li class="footer__item">
+                        <a href="https://www.scratch.mit.edu/contact" class="footer__link" target="_blank">Centro de soporte</a>
+                    </li>
+                    <li class="footer__item">
+                        <a href="https://www.scratch.mit.edu/contact" class="footer__link" target="_blank">Contáctanos</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        
+        <div class="footer__rights">
+            <center> <p class="footer__copy">&#169; 2024 Scratch. Elaborado por : Génesis Acosta</p></center>
+            <div class="footer__terms">
+            </div>
+        </div>
+    </div>
+</footer>
+
+
+
+         <!--========== SCROLL UP ==========-->
+         <a href="#" class="scrollup" id="scroll-up">
+            <i class="ri-arrow-up-line scrollup__icon"></i>
+        </a>
+
+        <!--=============== SCROLL REVEAL===============-->
+        <script src="assets/js/scrollreveal.min.js"></script>
+        
+        <!--=============== SWIPER JS ===============-->
+        <script src="assets/js/swiper-bundle.min.js"></script>
+
+        <!--=============== MAIN JS ===============-->
+        <script src="assets/js/main.js"></script>
+    </body>
+</html>
